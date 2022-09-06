@@ -1,0 +1,93 @@
+:root {
+    background:  rgb(245, 122, 175);
+    background: radial-gradient(circle, rgb(245, 122, 175) 0%, rgba(77,81,242,1) 100%);
+}
+
+* {
+    color: rgb(255, 204, 37);
+    font-family: monospace;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+h2 {
+    font-size: 4.2rem;
+    margin-bottom: 4rem;
+}
+
+a:hover {
+    color:rgb(250, 104, 189);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex.center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: rgb(255, 204, 37);
+    background-color: darkgreen;
+    border-color: rgb(255, 204, 37);
+    border-radius: 4px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgb(34, 20, 224);
+    color:rgb(215, 169, 245);
+}
+
+.btn:active {
+    background-color: rgb(252, 132, 21);
+}
+
+.btn[disabled]:hover {
+    cursor: not-allowed;
+}
+
+#highscore-btn {
+    background-color: darkgreen;
+}
+
+#highscore-btn:hover {
+    background-color: rgb(34, 20, 224);
+}
+
+#highscore-btn:active {
+    background-color: rgb(252, 132, 21);
+}
