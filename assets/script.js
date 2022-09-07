@@ -1,21 +1,20 @@
-question = document.querySelector('#question');
-choices = Array.from(document.querySelectorAll('.choice-text'));
-scoreText = document.querySelector('#score');
+var question = document.querySelector('#question');
+var choices = Array.from(document.querySelectorAll('.choice-text'));
+var scoreText = document.querySelector('#score');
 
 let currentQuestion = {};
-let acceptingAnswers = true;
+let correctAnswer = true;
 let score = 0;
 let questionCounter = 0;
-let availableQuestions = [];
 
 let questions = [
     {
-      question: 'Complete the following statement: A _______ is used to repeat a specific block of code a known number of times.'
-      choice1: 'Comment'
-      choice2: 'For loop'
-      choice3: 'Operator'
-      choice4: 'If Statement'
-      answer: 'For loop'
+      question: 'Complete the following statement: A _______ is used to repeat a specific block of code a known number of times.',
+      choice1: 'Comment',
+      choice2: 'For loop',
+      choice3: 'Operator',
+      choice4: 'If Statement',
+      answer: 'For loop',
     },
     {
         question: 'What is an array?'
@@ -89,4 +88,49 @@ let questions = [
         choice4: 'document.afunction'
         answer: 'function aFunction()'
       },
-]
+];
+
+//function for the initiation of the quiz, utilising addEventListener and querySelector
+// quiz init will need to start timer and display first question
+function quizInit() {
+addEventListener("click",document.querySelector("start"));
+};
+
+//function to start timer
+function startTimer() {
+  var interval = setInterval(funtion() {
+    document.getElementsByClassName("timer").innerHTML = "" + i;
+    i-- || clearInterval(interval);
+
+    if (i === 0) {
+      //display form to enter initials so users can save their highscores
+      //hide quiz container
+      document.getElementsByClassName("container") = display(none);
+    };
+
+    //if statement for wrong answer being chosen time to reduce by 5 seconds
+    if (choice !=== correctAnswer);
+    i -- 5000;
+
+  }, 1000);
+};
+
+//function for displaying questions and choices
+//want to display each 'question' currently stored as a string in questions array here
+document.getElementById("question").innerHTML = question
+
+//then want to display each corresponding choice in the choice button 
+document.getElementById("1").innerHTML = (questions[choice1]) 
+
+if (choice === correctAnswer) = display.(Correct!)
+
+if (choice != correctAnswer) = display.(Incorrect!)
+//then want to be able to log the user input, either add this to the score counter or subtract from time
+//this would just be done with an eventlistener'click' on button for choice
+//then want to switch to next question and new set of choices
+//once we have no more questions or no more time we will display the input your initials form
+
+
+//to save most recent score and and entered initials of user to local.storage
+
+quizInit()
